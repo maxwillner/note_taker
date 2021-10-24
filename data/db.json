@@ -2,19 +2,33 @@
   "notes": [
     {
       "title": "Test Title",
-      "text": "Test text"
+      "text": "Test text",
+      "id": 0
     },
     {
       "title": "Where is Zion?",
-      "text": "Near the core of the Earth"
+      "text": "Near the core of the Earth",
+      "id": 1
     },
     {
       "title": "Choose Wisely",
-      "text": "Do you want the Blue pill or the Red pill?"
+      "text": "Do you want the Blue pill or the Red pill?",
+      "id": 2
     },
     {
       "title": "Always Be Aware",
-      "text": "Did you see the woman in the red dress? "
+      "text": "Did you see the woman in the red dress? ",
+      "id": 3
+    },
+    {
+      "title": "Do you hear that? ",
+      "text": "That is the sound of inevitability!",
+      "id": "4"
+    },
+    {
+      "title": "I hate this place",
+      "text": "I must get free",
+      "id": "5"
     }
   ]
 }

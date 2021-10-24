@@ -8,19 +8,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+
+// api routes
 app.get("/api/notes", (req, res) => {  
     res.json(notes);                  
 });
 
-
 app.post("/api/notes", (req, res) => {
     console.log(req.body);
-    // req.body.id = notes.length.toString();
+    req.body.id = notes.length.toString();
 
     const note = createNewNote(req.body, notes)
     res.json(note);
 });
 
+
+// html routes
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./public/index.html"));
 });
