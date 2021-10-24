@@ -3,6 +3,8 @@ const { notes } = require("./data/db.json");
 const fs = require("fs");
 const path = require("path");
 
+const PORT = process.env.PORT || 3001;
+
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -36,6 +38,8 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
+
+// createNewNote function
 function createNewNote(body, notesArray) {
     const note = body;
     notesArray.push(note)
@@ -47,8 +51,8 @@ function createNewNote(body, notesArray) {
     return note;
 };
 
-app.listen(3001, () => {
-    console.log(`API server now on port 3001!`);
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
   });
 
 
